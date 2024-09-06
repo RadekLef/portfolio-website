@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, FormEvent } from "react";
+import React, { useRef, useState, FormEvent } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -11,21 +11,25 @@ import SubmitBtn from "./submit-btn";
 export default function Contact() {
     const { ref } = useSectionInView("Kontakt");
     const formRef = useRef<HTMLFormElement>(null); 
+    const [pending, setPending] = useState(false); 
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault(); 
+        setPending(true); 
+
         const formData = new FormData(formRef.current!); 
 
         const { data, error } = await sendEmail(formData);
 
         if (error) {
             toast.error(error);
+            setPending(false); 
             return;
         }
 
         toast.success("Email byl úspěšně odeslán");
-
-        formRef.current?.reset();
+        formRef.current?.reset(); 
+        setPending(false); 
     };
 
     return (
@@ -33,18 +37,10 @@ export default function Contact() {
             ref={ref}
             id="contact"
             className="mb-28 scroll-mt-28 sm:mb-20 w-[min(100%,38rem)] text-slate-200 text-center"
-            initial={{
-                opacity: 0,
-            }}
-            whileInView={{
-                opacity: 1,
-            }}
-            transition={{
-                duration: 1,
-            }}
-            viewport={{
-                once: true,
-            }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
         >
             <SectionHeading>Kontaktujte Mě</SectionHeading>
             <p className="text-slate-300 -mt-5">
@@ -70,8 +66,9 @@ export default function Contact() {
                     required
                     maxLength={5000}
                 />
-                <SubmitBtn />
+                <SubmitBtn pending={pending} /> {}
             </form>
         </motion.section>
     );
 }
+
