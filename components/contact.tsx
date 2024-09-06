@@ -43,13 +43,13 @@ export default function Contact() {
       toast.success("Email byl úspěšně odeslán")
     }}
     >
-        <input className="h-14 px-4 rounded-lg borderBlack transition-all"
+        <input className="h-14 px-4 rounded-lg borderBlack transition-all text-slate-900"
           name="senderEmail"
           type="email"
           required
           maxLength={500}
           placeholder="Váš email"/>
-        <textarea className="h-52 my-3 rounded-lg borderBlack p-4 transition-all "
+        <textarea className="h-52 my-3 rounded-lg borderBlack p-4 transition-all text-slate-900"
           name="message"
           placeholder="Vaše zpráva"
           required
