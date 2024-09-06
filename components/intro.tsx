@@ -42,11 +42,14 @@ export default function Intro() {
                 delay: 0.1
             }}>
                 <Link href="#contact" 
-                onClick={() => {
-                    setActiveSection("Kontakt");
-                    setTimeOfLastClick(Date.now())
-                }} 
-                className="group bg-slate-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-400 active:scale-105 transition">Kontaktuj mě<BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/></Link>
+      onClick={() => {
+          setActiveSection("Kontakt");
+          setTimeOfLastClick(Date.now())
+      }} 
+      className="group bg-slate-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 hover:bg-slate-400 active:scale-100 focus:scale-100 transition">
+      Kontaktuj mě
+      <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+</Link>
                 <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10" href="/CV.pdf" download>Stáhnout CV<HiDownload className="opacity-70 group-hover:translate-y-1 transition"/></a>
                 <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10" href="https://linkedin.com" target="_blank"><BsLinkedin /></a>
                 <a className="bg-white text-gray-700 text-[1.2rem] p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10" href="https://github.com" target="_blank"><FaGithubSquare /></a>
