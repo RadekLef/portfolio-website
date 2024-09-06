@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section 
     ref={ref}    
     id="contact"
-        className="mb-28 scroll-mt-28 sm:mb-20 w-[min(100%,38rem)] text-center"
+        className="mb-28 scroll-mt-28 sm:mb-20 w-[min(100%,38rem)] text-slate-200 text-center"
         initial={{
             opacity: 0,
         }}
@@ -30,7 +30,7 @@ export default function Contact() {
         }}
         >
         <SectionHeading>Kontaktujte Mě</SectionHeading>
-        <p className="text-gray-700 -mt-5">Prosím kontaktujte mě pomocí mailu na <a href="mailto:radek.lefnar@icloud.com" className="underline">radek.lefnar@icloud.com</a> nebo přes formulář</p>
+        <p className="text-slate-300 -mt-5">Prosím kontaktujte mě pomocí mailu na <a href="mailto:radek.lefnar@icloud.com" className="underline">radek.lefnar@icloud.com</a> nebo přes formulář</p>
     <form className="mt-10 flex flex-col"
       action={async (formData) => {
       const {data, error} = await sendEmail(formData);

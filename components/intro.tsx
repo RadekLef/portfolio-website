@@ -27,10 +27,10 @@ export default function Intro() {
                     duration: 0.2,
                 }}>
                     <Image src="https://images.unsplash.com/photo-1547481887-a26e2cacb5b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile picture" width="192" height="192" quality="95" priority={true}
-                    className="h-32 w-32 rounded-full border-[0.35rem] border-white object-cover shadow-xl"/>
+                    className="h-32 w-32 sm:h-64 sm:w-64 rounded-2xl border-[0.35rem] border-white object-cover shadow-xl"/>
                 </motion.div>
             </div>
-            <motion.p className="mb-10 mt-4 px-4 text-2xl !leading-[1.5] sm:text-4xl font-thin"
+            <motion.p className="mb-10 mt-4 px-4 text-2xl !leading-[1.5] sm:text-4xl font-thin bg-slate-500/20 rounded-3xl text-slate-300"
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}>
                 Jmenuji se <span className="font-normal">Radek Lefnar</span>, více jak šest let jsem působil ve státní sféře - expert/znalec v oboru speciální biologie v Kriminalistickém ústavu v Praze. Ke kódování jsem se dostal náhodou a okamžitě si mě to získalo. Po práci se věnuji kódování několik hodin denně.
@@ -46,7 +46,7 @@ export default function Intro() {
                     setActiveSection("Kontakt");
                     setTimeOfLastClick(Date.now())
                 }} 
-                className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">Kontaktuj mě<BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/></Link>
+                className="group bg-slate-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-400 active:scale-105 transition">Kontaktuj mě<BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/></Link>
                 <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10" href="/CV.pdf" download>Stáhnout CV<HiDownload className="opacity-70 group-hover:translate-y-1 transition"/></a>
                 <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10" href="https://linkedin.com" target="_blank"><BsLinkedin /></a>
                 <a className="bg-white text-gray-700 text-[1.2rem] p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10" href="https://github.com" target="_blank"><FaGithubSquare /></a>
