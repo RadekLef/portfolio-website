@@ -20,7 +20,7 @@ export default function About() {
     >
         <SectionHeading>O mně</SectionHeading>
         <p className="mb-3">
-            Je mi 34 let. Kódování se učím necelé dva roky - první web, který mě zaujal byl Codecademy. Tento web mi dal základy pro to se naučit HTML, CSS a JavaScript. Jak jsem se dál rozhlížel, tak jsem narazil na TailWind CSS framework. Dalším krokem je získat pevné základní znalosti v React a Next.js
+            Je mi 34 let. Ke kódování jsem se dostal před 2 lety. V současné době pracuji jako znalec v oboru biologie v Kriminalistickém ústavu v Praze. Web development mě zaujal natolik, že jsem se rozhodl změnit obor a věnovat se mu naplno. Základy HTML, CSS a JavaScriptu jsem se naučil na webu Codecademy. Další technologie jako Tailwind CSS, React, Next js jsem se naučil na Udemy nebo svépomocí. Web development mě osobně posouvá, protože jsou zde neustálé výzvy a mám se stále co učit.
         </p>
         <p className="italic">
             Mimo práci a kódování, jsem fanoušek fotografií. Fotím nejraději zvířata (psy). Spolu s manželkou velmi rádi cestujeme.

@@ -10,6 +10,7 @@ import SubmitBtn from "./submit-btn";
 
 export default function Contact() {
     const { ref } = useSectionInView("Kontakt");
+    
     const formRef = useRef<HTMLFormElement>(null); 
     const [pending, setPending] = useState(false); 
 

@@ -1,4 +1,6 @@
-import underConstructionImg from "@/public/MCRT609.jpg";
+import kpchp from "@/public/kpchp.jpeg";
+import radektube from "@/public/radektube.jpeg";
+import todolistimg from "@/public/todolist.jpeg";
 
 export const links = [
   {
@@ -26,25 +28,28 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "Chystá se",
+    title: "KPCHP",
     description:
-      "Zde budou příklady mých osobních projektů. Žádný z těchto projektů nebyl nikde veřejně využit.",
-    tags: ["React", "Next.js", "Tailwind", "TypeScript", "Framer-motion"],
-    imageUrl: underConstructionImg,
+      "Jednoduchý projekt - web pro klub přátel chodského psa. Vytvořený v Reactu s Tailwind CSS.",
+    tags: ["React", "Tailwind", "Framer-motion"],
+    imageUrl: kpchp,
+    linkUrl: "https://kpchp-project.vercel.app/",
   },
   {
-    title: "V produkci",
+    title: "Youtube klon",
     description:
-      "Zde budou příklady mých osobních projektů. Žádný z těchto projektů nebyl nikde veřejně využit.",
-    tags: ["React", "Next.js", "Tailwind"],
-    imageUrl: underConstructionImg,
+      "Další jednoduchý projekt - klon Youtube. Vytvořený v Reactu s Tailwind CSS. Jedná se pouze o domovskou stránku.",
+    tags: ["React", "Tailwind"],
+    imageUrl: radektube,
+    linkUrl: "https://radek-tube.vercel.app/",
   },
   {
-    title: "Stále v produkci",
+    title: "Todo list",
     description:
-      "Zde budou příklady mých osobních projektů. Žádný z těchto projektů nebyl nikde veřejně využit.",
-    tags: ["React", "Next.js", "Tailwind", "Framer"],
-    imageUrl: underConstructionImg,
+      "Projekt - Todo list. Vytvořený v Reactu s Tailwind CSS. Umožňuje přidávat, mazat a označovat úkoly jako hotové. Další funkcionalita je registrace a přihlášení uživatele.",
+    tags: ["React", "Tailwind", "Context API", "Kinde Auth"],
+    imageUrl: todolistimg,
+    linkUrl: "https://to-do-app-eta-coral.vercel.app/",
   },
 ] as const;
 
